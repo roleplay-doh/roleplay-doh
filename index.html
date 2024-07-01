@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles">
+  <meta name="keywords" content="Roleplay-doh">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/salt-logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .imgcolumn {
+      float: left;
+      width: 50%;
+      padding: 10px
+    }
+
+    /* Clear floats after image containers */
+    .imgrow::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    table.customTable {
+      width: 50%;
+      background-color: #FFFFFF;
+      border-collapse: collapse;
+      border-width: 2px;
+      border-color: rgb(214, 236, 244);
+      border-style: solid;
+      color: #000000;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    table.customTable td {
+      border-width: 2px;
+      border-color: rgb(214, 236, 244);
+      border-style: solid;
+      padding: 5px;
+      text-align: center; 
+      vertical-align: middle;
+    }
+
+    table.customTable th {
+      border-width: 2px;
+      border-color: rgb(214, 236, 244);
+      border-style: solid;
+      padding: 5px;
+    }
+    
+    table.customTable thead {
+      background-color: rgb(214, 236, 244);
+    }
+    </style>
+</head>
+<body>
+  
+  
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://youralien.github.io/">Ryan Louie</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://ananjan-nandi-9.github.io/">Ananjan Nandi</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/williamfang25">William Fang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/chc012">Cheng Chang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://cs.stanford.edu/people/ebrun/">Emma Brunskill</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://cs.stanford.edu/~diyiy/">Diyi Yang</a>
+            </span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">Stanford University</span>
+          </div> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <img src="./static/images/stanford-university-logo-2.png" style="margin-right: 50px;" width="200" align="absmiddle"/>  
+            </span><!---->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/SALT-NLP/roleplay-doh"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent works leverage LLMs to roleplay realistic social scenarios, aiding novices in practicing their social skills. However, simulating sensitive interactions, such as in mental health, is challenging. Privacy concerns restrict data access, and collecting expert feedback, although vital, is laborious. To address this, we develop Roleplay-doh, a novel human-LLM collaboration pipeline that elicits qualitative feedback from a domain-expert, which is transformed into a set of principles, or natural language rules, that govern an LLM-prompted roleplay. We apply this pipeline to enable senior mental health supporters to create customized AI patients for simulated practice partners for novice counselors. After uncovering issues in GPT-4 simulations not adhering to expert-defined principles, we also introduce a novel principle-adherence prompting pipeline which shows 30\% improvements in response quality and principle following for the downstream task. Via a user study with 25 counseling experts, we demonstrate that the pipeline makes it easy and effective to create AI patients that more faithfully resemble real patients, as judged by creators and third-party counselors.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Eliciting Expert-Defined Principles for LLM-Simulations</h2>
+          <img src="./static/images/rpdteaser-clean.png" class="example-image" alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."/>
+          <p><small>Roleplay-doh is a tool supporting human-LLM collaboration for domain-experts refining LLM-simulations. Applied to domain of mental-health, the tool enables expert counselor to create a customized AI patient intended for other novice counselors to use as a practice partner. While interacting with the AI patient, the expert counselor can provide qualitative feedback which is converted by an LLM into a principle, or a custom rule governing desired roleplay behavior. The AI patient references the updated expert-defined principles to generate its subsequent responses.</small></p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Principle-Adherence Prompting Pipeline</h2>
+          <img src="./static/images/principle-adherence-stages-colorpop.png" class="example-image" alt="Principle-adherence prompting pipeline"/>
+          <p><small>We introduce a Principle-Adherence prompting pipeline for mitigating errors in satisfying expert-defined principles and dialogue conventions. In Stage 1, expert-defined principles are rewritten into several Yes/No questions; and the LLM generates additional principle questions that are relevant to ensure adherence to dialogue conventions such as coherence and consistency. In Stage 2, the LLM (a) evaluates whether the questions are applicable to the context and the answers to the principle-adherence questions; and (b) refines the response to ideally receive Yes on all questions.</small></p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Creator Study Results</h2>
+          <table>
+            <thead>
+              <tr>
+                  <th colspan="3">Ratings by Counselor Creators</th>
+                  <th colspan="3">Ratings by Third-Party Counselors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <th>Measure</th>
+                  <th>Scenario Only</th>
+                  <th>+ Principles</th>
+                  <th>Measure</th>
+                  <th>Scenario Only</th>
+                  <th>+ Principles</th>
+              </tr>
+              <tr>
+                  <td>Authenticity</td>
+                  <td>5.24</td>
+                  <td>+0.80 **</td>
+                  <td>Authenticity</td>
+                  <td>5.32</td>
+                  <td>+0.31 *</td>
+              </tr>
+              <tr>
+                  <td>Stayed in Role</td>
+                  <td>6.32</td>
+                  <td>+0.08</td>
+                  <td>Stayed in Role</td>
+                  <td>6.29</td>
+                  <td>+0.09</td>
+              </tr>
+              <tr>
+                  <td><em>Resembled Past Case</em></td>
+                  <td>4.80</td>
+                  <td>+0.76 *</td>
+                  <td><em>Resembled Typical Case</em></td>
+                  <td>4.91</td>
+                  <td>+0.49 **</td>
+              </tr>
+              <tr>
+                  <td><em>Mirrored Challenging Aspects</em></td>
+                  <td>4.52</td>
+                  <td>+1.00 *</td>
+                  <td><em>Challenged the Counselor</em></td>
+                  <td>2.13</td>
+                  <td>+0.22</td>
+              </tr>
+              <tr>
+                  <td>Ready as Training Partner</td>
+                  <td>5.16</td>
+                  <td>+0.64 *</td>
+                  <td>Ready as Training Partner</td>
+                  <td>5.05</td>
+                  <td>+0.39 **</td>
+              </tr>
+              <tr>
+                  <td>Recommend to Novices</td>
+                  <td>5.76</td>
+                  <td>+0.52 *</td>
+                  <td>Recommend to Novices</td>
+                  <td>5.03</td>
+                  <td>+0.38 *</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><small>Creators and third-party counselors compared the <em>Scenario-Only</em> vs. <em>Scenario+ExpertPrinciples</em> AI patients using 7-point Likert-scale measures; third-party judges were asked identical measures when possible, with two measures modified to match the external perspective. <strong>Creator Ratings:</strong> Creators (N=25) rated both AI patients. After refining the AI patient simulation with principles, creators rate the patient significantly higher on all measures except for <em>stayed in role</em>, for which both AI patients score highly. <strong>Third-Party Ratings:</strong> Third-party counselors (N=5) provided 125 total comparisons of the two AI patient versions. The treatment effect of adding expert principles was estimated using using the following linear mixed-effect model: <code>Rating~Treatment+CreatorID+(1|AnnotatorID)</code>. Third-party counselors rate AI patients with principles significantly higher on 4 of the 6 measures. (***: <em>p</em> &lt; .001, **: <em>p</em> &lt; 0.01, *: <em>p</em> &lt; 0.05.)</small></p>
+          
+          <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b># AI patients</b></td>
+                <td><b>Theme</b></td>
+                <td><b>Example Principle</b></td>
+            </tr>
+            <tr>
+                <td class="gray-bg"></td>
+                <td class="gray-bg"></td>
+                <td class="gray-bg"></td>
+                <td>7</td>
+                <td>Use colloquial and realistic language.</td>
+                <td>Incorporate natural speech patterns, improper grammar and punctuation, including the use of slang and less structured sentences, to convey a more authentic and relatable character.</td>
+            </tr>
+            <tr>
+                <td class="orange-bg"></td>
+                <td></td>
+                <td></td>
+                <td>14</td>
+                <td>Show initial mistrust and hesitation with the idea of seeking help.</td>
+                <td>When expressing feelings of overwhelm and doubt, provide limited information and express skepticism towards the effectiveness of seeking help.</td>
+            </tr>
+            <tr>
+                <td class="orange-bg"></td>
+                <td class="blue-bg"></td>
+                <td></td>
+                <td>19</td>
+                <td>Show emotions in detail, elaborating with examples as needed. <span class="yellow-bg">*</span></td>
+                <td>When describing personal struggles, provide specific details and symptoms to help the listener understand the situation better.</td>
+            </tr>
+            <tr>
+                <td class="orange-bg"></td>
+                <td class="blue-bg"></td>
+                <td></td>
+                <td>9</td>
+                <td>Be less self-aware of emotions, thoughts, and needs. Articulate thoughts in a more disorganized way.</td>
+                <td>When expressing reluctance or uncertainty about seeking help or accepting praise, it&#39;s important to convey the internal struggle and conflicting emotions, rather than presenting a clear-cut decision or emotion.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="blue-bg"></td>
+                <td class="green-bg"></td>
+                <td>3</td>
+                <td>Do not seek out solutions, but rather just share thoughts and feelings. <span class="yellow-bg">*</span></td>
+                <td>When expressing feelings of being stuck or defeated, focus on sharing emotions rather than seeking a resolution.</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td class="green-bg"></td>
+                <td>12</td>
+                <td>Proactively seek out solutions and show reflective insight over time. <span class="yellow-bg">*</span></td>
+                <td>When discussing personal struggles, provide reflective insights into your situation and propose actionable steps for improvement to continue the conversation effectively.</td>
+            </tr>
+          </table>
+          <p><small>We conducted a thematic analysis of the expert-defined principles for the AI patients created, and display several representative examples. We discover several novel <span class="yellow-bg">(*)</span> principles compared to those defined in prior work on AI patients (<a href="https://arxiv.org/abs/2305.13614">Chen et al. 2023</a>, <a href="https://arxiv.org/abs/2306.03097">Stapleton 2023</a>). The themes are categorized into stages of conversation taken from <a href="https://arxiv.org/abs/2106.01144">Liu et al. 2021's</a> work on Emotional Support Conversations</a>: <span class="orange-bg">exploration</span>, <span class="blue-bg">comforting</span>, and <span class="green-bg">action</span>; those relating to the overall conversation are categorized as <span class="gray-bg">stage-agnostic.</span></small></p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Evaluation of Principle-Adherence Pipeline</h2>
+          <img src="./static/images/error_2.png" class="example-image" alt="Principle-adherence prompting pipeline"/>
+          <p><small>Win/Tie/Loss for the Error Test Cases along <strong>Consistency with Context (M1)</strong>, <strong>Principle Adherence (M3)</strong>, and <strong>Overall</strong>. Pairwise preference evaluation results with <code>No Critique</code> as a baseline. Results obtained after majority voting.</small></p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{louie2024roleplaydoh,
+    title={Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles},
+    author={Ryan Louie and Ananjan Nandi and William Fang and Cheng Chang and Emma Brunskill and Diyi Yang},
+    year={2024},
+    eprint={},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+    url={https://arxiv.org/abs/2406.},
+}</code></pre>
+  </div>
+</section>
+
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Usage and License Notices</h2>
+    <p>
+      The code and data are intended and licensed for research use only. Please do not use them for any malicious purposes.
+    </p>
+    <p>
+      This website is licensed under a <a rel="license"
+                                          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+      Commons Attribution-ShareAlike 4.0 International License</a>.
+    </p>
+    <p>
+      This source code of this website is borrowed from <a
+        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+    </p>
+  </div>
+</section>
+
+
+<!-- 
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This source code of this website is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
