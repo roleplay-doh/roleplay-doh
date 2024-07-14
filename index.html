@@ -172,13 +172,10 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Eliciting Expert-Defined Principles for LLM-Simulations</h2>
-          <!-- <img
-            src="./static/images/rpdteaser-clean.gif"
-            class="example-image"
-            style="display: block; margin-left: auto; margin-right: auto; width: 50%;"
-            alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."
-          /> -->
-          <img src="./static/images/rpdteaser-clean.png" class="example-image" alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."/>
+          <video autoplay loop muted playsinline>
+            <source src="static/video/rpdteaser-clean.webm" type="video/webm">
+            <img src="./static/images/rpdteaser-clean.png" class="example-image" alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."/>
+          </video>
           <p><small>Roleplay-doh is a tool supporting human-LLM collaboration for domain-experts refining LLM-simulations. Applied to domain of mental-health, the tool enables expert counselor to create a customized AI patient intended for other novice counselors to use as a practice partner. While interacting with the AI patient, the expert counselor can provide qualitative feedback which is converted by an LLM into a principle, or a custom rule governing desired roleplay behavior. The AI patient references the updated expert-defined principles to generate its subsequent responses.</small></p>
         </div>
       </div>
@@ -192,7 +189,10 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Principle-Adherence Prompting Pipeline</h2>
-          <img src="./static/images/principle-adherence-stages-colorpop.png" class="example-image" alt="Principle-adherence prompting pipeline"/>
+          <video autoplay loop muted playsinline>
+            <source src="static/video/principle-adherence-stages-colorpop.webm" type="video/webm">
+            <img src="./static/images/principle-adherence-stages-colorpop.png" class="example-image" alt="Principle-adherence prompting pipeline"/>
+          </video>
           <p><small>We introduce a Principle-Adherence prompting pipeline for mitigating errors in satisfying expert-defined principles and dialogue conventions. In Stage 1, expert-defined principles are rewritten into several Yes/No questions; and the LLM generates additional principle questions that are relevant to ensure adherence to dialogue conventions such as coherence and consistency. In Stage 2, the LLM (a) evaluates whether the questions are applicable to the context and the answers to the principle-adherence questions; and (b) refines the response to ideally receive Yes on all questions.</small></p>
         </div>
       </div>
