@@ -79,7 +79,11 @@ body {
 }
 
 .author-block {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 .publication-banner img {

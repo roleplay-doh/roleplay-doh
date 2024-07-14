@@ -69,10 +69,8 @@
       background-color: rgb(214, 236, 244);
     }
 
-    .author-block {
-      display: flex;
-      flex-direction: column;
-      margin: 5px;
+    .author-image {
+      width: 100px;
     }
     </style>
 </head>
@@ -86,29 +84,29 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles</h1>
-          <div class="is-size-5 publication-authors" style="display: flex; flex-direction: row;">
+          <div class="is-size-5 publication-authors" style="display: flex; flex-direction: row; max-width: fit-content; margin-inline: auto;">
             <div class="author-block">
-              <img src="static\images\salt-logo.png" width="200" alt="Ryan Louie">
+              <img src="static/images/authors/ryan_louie.jpeg" class="author-image" alt="Ryan Louie">
               <a href="https://youralien.github.io/" style="margin: 5px;">Ryan Louie</a>
             </div>
             <div class="author-block">
-              <img src="static\images\salt-logo.png" width="200" alt="Ananjan Nandi">
+              <img src="static/images/authors/ananjan_nandi.jpg" class="author-image" alt="Ananjan Nandi">
               <a href="https://ananjan-nandi-9.github.io/" style="margin: 5px;">Ananjan Nandi</a>
             </div>
             <div class="author-block">
-              <img src="static\images\salt-logo.png" width="200" alt="William Fang">
+              <img src="static/images/authors/william_fang.jpg" class="author-image" alt="William Fang">
               <a href="https://www.linkedin.com/in/williamfang25" style="margin: 5px;">William Fang</a>
             </div>
             <div class="author-block">
-              <img src="static\images\salt-logo.png" width="200" alt="Cheng Chang">
+              <img src="static/images/authors/cheng_chang.JPG" class="author-image" alt="Cheng Chang">
               <a href="https://www.linkedin.com/in/chc012" style="margin: 5px;">Cheng Chang</a>
             </div>
             <div class="author-block">
-              <img src="static\images\salt-logo.png" width="200" alt="Emma Brunskill">
+              <img src="static/images/authors/ebrunskill_2024.jpg" class="author-image" alt="Emma Brunskill">
               <a href="https://cs.stanford.edu/people/ebrun/" style="margin: 5px;">Emma Brunskill</a>
             </div>
             <div class="author-block">
-              <img src="static\images\salt-logo.png" width="200" alt="Diyi Yang">
+              <img src="static/images/authors/Diyi_Yang.jpg" class="author-image" alt="Diyi Yang">
               <a href="https://cs.stanford.edu/~diyiy/" style="margin: 5px;">Diyi Yang</a>
             </div>
           </div>
@@ -174,6 +172,12 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Eliciting Expert-Defined Principles for LLM-Simulations</h2>
+          <!-- <img
+            src="./static/images/rpdteaser-clean.gif"
+            class="example-image"
+            style="display: block; margin-left: auto; margin-right: auto; width: 50%;"
+            alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."
+          /> -->
           <img src="./static/images/rpdteaser-clean.png" class="example-image" alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."/>
           <p><small>Roleplay-doh is a tool supporting human-LLM collaboration for domain-experts refining LLM-simulations. Applied to domain of mental-health, the tool enables expert counselor to create a customized AI patient intended for other novice counselors to use as a practice partner. While interacting with the AI patient, the expert counselor can provide qualitative feedback which is converted by an LLM into a principle, or a custom rule governing desired roleplay behavior. The AI patient references the updated expert-defined principles to generate its subsequent responses.</small></p>
         </div>
