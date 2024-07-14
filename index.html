@@ -68,6 +68,10 @@
     table.customTable thead {
       background-color: rgb(214, 236, 244);
     }
+
+    .author-image {
+      width: 100px;
+    }
     </style>
 </head>
 <body>
@@ -80,34 +84,36 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://youralien.github.io/">Ryan Louie</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://ananjan-nandi-9.github.io/">Ananjan Nandi</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/williamfang25">William Fang</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/chc012">Cheng Chang</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://cs.stanford.edu/people/ebrun/">Emma Brunskill</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://cs.stanford.edu/~diyiy/">Diyi Yang</a>
-            </span>
+          <div class="is-size-5 publication-authors" style="display: flex; flex-direction: row; max-width: fit-content; margin-inline: auto;">
+            <div class="author-block">
+              <img src="static/images/authors/ryan_louie.jpeg" class="author-image" alt="Ryan Louie">
+              <a href="https://youralien.github.io/" style="margin: 5px;">Ryan Louie</a>
+            </div>
+            <div class="author-block">
+              <img src="static/images/authors/ananjan_nandi.jpg" class="author-image" alt="Ananjan Nandi">
+              <a href="https://ananjan-nandi-9.github.io/" style="margin: 5px;">Ananjan Nandi</a>
+            </div>
+            <div class="author-block">
+              <img src="static/images/authors/william_fang.jpg" class="author-image" alt="William Fang">
+              <a href="https://www.linkedin.com/in/williamfang25" style="margin: 5px;">William Fang</a>
+            </div>
+            <div class="author-block">
+              <img src="static/images/authors/cheng_chang.JPG" class="author-image" alt="Cheng Chang">
+              <a href="https://www.linkedin.com/in/chc012" style="margin: 5px;">Cheng Chang</a>
+            </div>
+            <div class="author-block">
+              <img src="static/images/authors/ebrunskill_2024.jpg" class="author-image" alt="Emma Brunskill">
+              <a href="https://cs.stanford.edu/people/ebrun/" style="margin: 5px;">Emma Brunskill</a>
+            </div>
+            <div class="author-block">
+              <img src="static/images/authors/Diyi_Yang.jpg" class="author-image" alt="Diyi Yang">
+              <a href="https://cs.stanford.edu/~diyiy/" style="margin: 5px;">Diyi Yang</a>
+            </div>
           </div>
 
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">Stanford University</span>
-          </div> -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <img src="./static/images/stanford-university-logo-2.png" style="margin-right: 50px;" width="200" align="absmiddle"/>  
-            </span><!---->
+            <img src="./static/images/stanford-university-logo-2.png" style="margin: 20px; margin-bottom: 10px;" width="200"/>
+            <img src="./static/images/salt-logo.png" style="margin: 20px; margin-bottom: 10px;" width="100"/>
           </div>
 
           <div class="column has-text-centered">
@@ -166,7 +172,10 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Eliciting Expert-Defined Principles for LLM-Simulations</h2>
-          <img src="./static/images/rpdteaser-clean.png" class="example-image" alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."/>
+          <video autoplay loop muted playsinline>
+            <source src="static/video/rpdteaser-clean.webm" type="video/webm">
+            <img src="./static/images/rpdteaser-clean.png" class="example-image" alt="Teaser figure illustrating how the Roleplay-doh tool allows domain-experts to chat and define principles for better behaviors."/>
+          </video>
           <p><small>Roleplay-doh is a tool supporting human-LLM collaboration for domain-experts refining LLM-simulations. Applied to domain of mental-health, the tool enables expert counselor to create a customized AI patient intended for other novice counselors to use as a practice partner. While interacting with the AI patient, the expert counselor can provide qualitative feedback which is converted by an LLM into a principle, or a custom rule governing desired roleplay behavior. The AI patient references the updated expert-defined principles to generate its subsequent responses.</small></p>
         </div>
       </div>
@@ -180,7 +189,10 @@
       <div class="column">
         <div class="content">
           <h2 class="title is-3">Principle-Adherence Prompting Pipeline</h2>
-          <img src="./static/images/principle-adherence-stages-colorpop.png" class="example-image" alt="Principle-adherence prompting pipeline"/>
+          <video autoplay loop muted playsinline>
+            <source src="static/video/principle-adherence-stages-colorpop.webm" type="video/webm">
+            <img src="./static/images/principle-adherence-stages-colorpop.png" class="example-image" alt="Principle-adherence prompting pipeline"/>
+          </video>
           <p><small>We introduce a Principle-Adherence prompting pipeline for mitigating errors in satisfying expert-defined principles and dialogue conventions. In Stage 1, expert-defined principles are rewritten into several Yes/No questions; and the LLM generates additional principle questions that are relevant to ensure adherence to dialogue conventions such as coherence and consistency. In Stage 2, the LLM (a) evaluates whether the questions are applicable to the context and the answers to the principle-adherence questions; and (b) refines the response to ideally receive Yes on all questions.</small></p>
         </div>
       </div>
