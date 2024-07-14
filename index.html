@@ -68,6 +68,12 @@
     table.customTable thead {
       background-color: rgb(214, 236, 244);
     }
+
+    .author-block {
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+    }
     </style>
 </head>
 <body>
@@ -80,32 +86,36 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Roleplay-doh: Enabling Domain-Experts to Create LLM-simulated Patients via Eliciting and Adhering to Principles</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://youralien.github.io/">Ryan Louie</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://ananjan-nandi-9.github.io/">Ananjan Nandi</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/williamfang25">William Fang</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/chc012">Cheng Chang</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://cs.stanford.edu/people/ebrun/">Emma Brunskill</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://cs.stanford.edu/~diyiy/">Diyi Yang</a>
-            </span>
+          <div class="is-size-5 publication-authors" style="display: flex; flex-direction: row;">
+            <div class="author-block">
+              <img src="static\images\salt-logo.png" width="200" alt="Ryan Louie">
+              <a href="https://youralien.github.io/" style="margin: 5px;">Ryan Louie</a>
+            </div>
+            <div class="author-block">
+              <img src="static\images\salt-logo.png" width="200" alt="Ananjan Nandi">
+              <a href="https://ananjan-nandi-9.github.io/" style="margin: 5px;">Ananjan Nandi</a>
+            </div>
+            <div class="author-block">
+              <img src="static\images\salt-logo.png" width="200" alt="William Fang">
+              <a href="https://www.linkedin.com/in/williamfang25" style="margin: 5px;">William Fang</a>
+            </div>
+            <div class="author-block">
+              <img src="static\images\salt-logo.png" width="200" alt="Cheng Chang">
+              <a href="https://www.linkedin.com/in/chc012" style="margin: 5px;">Cheng Chang</a>
+            </div>
+            <div class="author-block">
+              <img src="static\images\salt-logo.png" width="200" alt="Emma Brunskill">
+              <a href="https://cs.stanford.edu/people/ebrun/" style="margin: 5px;">Emma Brunskill</a>
+            </div>
+            <div class="author-block">
+              <img src="static\images\salt-logo.png" width="200" alt="Diyi Yang">
+              <a href="https://cs.stanford.edu/~diyiy/" style="margin: 5px;">Diyi Yang</a>
+            </div>
           </div>
 
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">Stanford University</span>
-          </div> -->
           <div class="is-size-5 publication-authors">
-            <img src="./static/images/stanford-university-logo-2.png" style="margin-top: 20px; margin-bottom: 10px;" width="200" align="absmiddle"/>  
+            <img src="./static/images/stanford-university-logo-2.png" style="margin: 20px; margin-bottom: 10px;" width="200"/>
+            <img src="./static/images/salt-logo.png" style="margin: 20px; margin-bottom: 10px;" width="100"/>
           </div>
 
           <div class="column has-text-centered">
@@ -148,7 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent works leverage LLMs to roleplay realistic social scenarios, aiding novices in practicing their social skills. However, simulating sensitive interactions, such as in mental health, is challenging. Privacy concerns restrict data access, and collecting expert feedback, although vital, is laborious. To address this, we develop Roleplay-doh, a novel human-LLM collaboration pipeline that elicits qualitative feedback from a domain-expert, which is transformed into a set of principles, or natural language rules, that govern an LLM-prompted roleplay. We apply this pipeline to enable senior mental health supporters to create customized AI patients for simulated practice partners for novice counselors. After uncovering issues in GPT-4 simulations not adhering to expert-defined principles, we also introduce a novel principle-adherence prompting pipeline which shows 30\% improvements in response quality and principle following for the downstream task. Via a user study with 25 counseling experts, we demonstrate that the pipeline makes it easy and effective to create AI patients that more faithfully resemble real patients, as judged by creators and third-party counselors.
+            Recent works leverage LLMs to roleplay realistic social scenarios, aiding novices in practicing their social skills. However, simulating sensitive interactions, such as in mental health, is challenging. Privacy concerns restrict data access, and collecting expert feedback, although vital, is laborious. To address this, we develop Roleplay-doh, a novel human-LLM collaboration pipeline that elicits qualitative feedback from a domain-expert, which is transformed into a set of principles, or natural language rules, that govern an LLM-prompted roleplay. We apply this pipeline to enable senior mental health supporters to create customized AI patients for simulated practice partners for novice counselors. After uncovering issues in GPT-4 simulations not adhering to expert-defined principles, we also introduce a novel principle-adherence prompting pipeline which shows 30% improvements in response quality and principle following for the downstream task. Via a user study with 25 counseling experts, we demonstrate that the pipeline makes it easy and effective to create AI patients that more faithfully resemble real patients, as judged by creators and third-party counselors.
           </p>
         </div>
       </div>
